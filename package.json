@@ -1,6 +1,7 @@
 {
-  "name": "frontend",
+  "name": "chat-frontend",
   "version": "0.1.0",
+  "homepage" : "http://1140864.github.io/chat-frontend",
   "babel": {
     "presets": [
       "es2015",
