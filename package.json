@@ -1,6 +1,7 @@
 {
-  "name": "frontend",
+  "name": "chatbot-chat-frontend",
   "version": "0.1.0",
+  "homepage": "https://1140864.github.io/chatbot-chat-frontend",
   "babel": {
     "presets": [
       "es2015",
@@ -10,11 +11,14 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.12"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
