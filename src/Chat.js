@@ -61,7 +61,7 @@ export default class Chat extends React.Component {
     addQuestion(message) {
 
         const text = message.replace(/(((https?:\/\/)|(www))([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?)/g, function(text, link) {
-            return '<a href="http://'+ link +'">'+ link +'</a>';
+            return '<a href="http://'+ link +'" target="_blank">'+ link +'</a>';
         });
 
         const messageObject = {
