@@ -31,7 +31,7 @@ export default class Chat extends React.Component {
 
     addResponse(message){
 
-        let msg = message.replace(/\n/g,'<br/><br/>');
+        let msg = message.replace(/\n/g,'<br/>');
         const text = msg.replace(/(((https?:\/\/)|(www))([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?)/g, function(text, link) {
             return '<a href="'+ link +'">'+ link +'</a>';
         });
