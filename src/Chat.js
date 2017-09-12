@@ -31,7 +31,8 @@ export default class Chat extends React.Component {
 
     addResponse(message){
 
-        const text = message.replace(/(www\..+?)(\s|$)/g, function(text, link) {
+        let lineBreakMessage = message.replace('\n', '<br />');
+        const text = lineBreakMessage.replace(/((https?:\/\/)|(www))([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/g, function(text, link) {
             return '<a href="http://'+ link +'">'+ link +'</a>';
         });
 
@@ -59,7 +60,7 @@ export default class Chat extends React.Component {
 
     addQuestion(message) {
 
-        const text = message.replace(/(www\..+?)(\s|$)/g, function(text, link) {
+        const text = message.replace(/((https?:\/\/)|(www))([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/g, function(text, link) {
             return '<a href="http://'+ link +'">'+ link +'</a>';
         });
 
