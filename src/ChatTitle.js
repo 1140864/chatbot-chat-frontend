@@ -5,7 +5,7 @@ export default class ChatTitle extends React.Component {
 
     constructor() {
         super();
-        this.name= "Chatbot";
+        this.name= "Vody";
         this.company = "Vodafone";
     }
 
